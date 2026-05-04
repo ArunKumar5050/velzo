@@ -1,0 +1,220 @@
+================================================================================
+FIREBASE DATA STRUCTURE FOR ADMIN PORTAL
+================================================================================
+
+This document outlines all Firebase Firestore data required to connect your 
+admin portal to the same database as your ONWAY app.
+
+================================================================================
+1. PRODUCTS COLLECTION
+================================================================================
+
+Path: /products/{productId}
+
+Required Fields:
+- id: string (unique product identifier)
+- name: string (product name)
+- brand: string (brand name)
+- category: string (medicines, grocery, beauty, electronics, etc.)
+- price: number (current selling price)
+- originalPrice: number (original/marked price)
+- rating: number (1-5 rating)
+- reviews: number (total number of reviews)
+- deliveryTime: number (delivery time in minutes)
+- imageUrl: string (URL to product image)
+- description: string (detailed product description)
+- warranty: string | null (warranty period, null if no warranty)
+- returnDays: number (number of days for return)
+- stock: number (current stock quantity)
+- createdAt: timestamp (creation date)
+- updatedAt: timestamp (last update date)
+
+Example Document:
+{
+  "id": "1",
+  "name": "Paracetamol",
+  "brand": "GENERIC",
+  "category": "medicines",
+  "price": 25,
+  "originalPrice": 25,
+  "rating": 4.0,
+  "reviews": 245,
+  "deliveryTime": 12,
+  "imageUrl": "https://res.cloudinary.com/dhjzybacp/image/upload/v1234567/paracetamol.jpg",
+  "description": "Effective pain reliever and fever reducer. Pack of 10 tablets.",
+  "warranty": "1 Year",
+  "returnDays": 7,
+  "stock": 100,
+  "createdAt": timestamp,
+  "updatedAt": timestamp
+}
+
+================================================================================
+2. ORDERS COLLECTION (Under Users)
+================================================================================
+
+Path: /users/{userId}/orders/{orderId}
+
+This is a SUBCOLLECTION under each user document. Orders are organized per user.
+
+Required Fields:
+- id: string (unique order identifier)
+- userId: string (Firebase Auth UID of the customer)
+- items: array of OrderItem objects
+  - productId: string
+  - name: string
+  - brand: string
+  - quantity: number
+  - price: number
+  - imageUrl: string (optional)
+- shippingAddress: ShippingAddress object
+  - id: string
+  - name: string
+  - address: string
+  - phone: string
+  - type: 'home' | 'work'
+- paymentMethod: PaymentMethod object
+  - id: string
+  - type: 'upi' | 'cards' | 'cod' | 'netbanking'
+  - label: string
+- subtotal: number (sum of all item prices)
+- deliveryFee: number (delivery charges)
+- tax: number (tax amount)
+- totalAmount: number (subtotal + deliveryFee + tax)
+- status: OrderStatus 
+  - Values: 'confirmed' | 'processing' | 'shipped' | 'in-transit' | 'delivered' | 'cancelled'
+- deliveryTime: number (estimated delivery time in minutes)
+- estimatedDelivery: string (estimated delivery timestamp)
+- createdAt: timestamp (order creation date)
+- updatedAt: timestamp (last status update)
+- notes: string (optional - admin notes about the order)
+
+Example Document:
+{
+  "id": "order_123",
+  "userId": "user_456",
+  "items": [
+    {
+      "productId": "1",
+      "name": "Paracetamol",
+      "brand": "GENERIC",
+      "quantity": 2,
+      "price": 25,
+      "imageUrl": "https://..."
+    }
+  ],
+  "shippingAddress": {
+    "id": "addr_1",
+    "name": "John Doe",
+    "address": "123 Main St, City, State 123456",
+    "phone": "+91 9876543210",
+    "type": "home"
+  },
+  "paymentMethod": {
+    "id": "payment_1",
+    "type": "upi",
+    "label": "Google Pay"
+  },
+  "subtotal": 50,
+  "deliveryFee": 5,
+  "tax": 5,
+  "totalAmount": 60,
+  "status": "confirmed",
+  "deliveryTime": 30,
+  "estimatedDelivery": "2024-04-23 02:30 PM",
+  "createdAt": timestamp,
+  "updatedAt": timestamp,
+  "notes": "Express delivery requested"
+}
+
+================================================================================
+3. USERS COLLECTION
+================================================================================
+
+Path: /users/{userId}
+
+Required Fields:
+- id: string (same as Firebase Authentication UID)
+- name: string (user's full name)
+- email: string (user's email address)
+- phone: string (user's phone number)
+- avatar: string (avatar emoji or URL)
+- createdAt: timestamp (account creation date)
+- updatedAt: timestamp (profile last updated)
+- status: string
+  - Values: 'active' | 'inactive' | 'suspended'
+
+Example Document:
+{
+  "id": "user_abc123def456",
+  "name": "Alex Johnson",
+  "email": "alex@example.com",
+  "phone": "+91 9876543210",
+  "avatar": "👤",
+  "createdAt": timestamp,
+  "updatedAt": timestamp,
+  "status": "active"
+}
+
+================================================================================
+4. FIREBASE CONFIGURATION
+================================================================================
+
+Use this configuration in your admin portal to connect to the same Firebase project:
+
+{
+  "apiKey": "AIzaSyCHPn-jMxmflg2cJPccFFue8o1SpSzVyNM",
+  "authDomain": "onway-f5999.firebaseapp.com",
+  "projectId": "onway-f5999",
+  "storageBucket": "onway-f5999.firebasestorage.app",
+  "messagingSenderId": "40420149902",
+  "appId": "1:40420149902:web:8fcfcb3279f0ade03a97df",
+  "measurementId": "G-8F47CPBZD8"
+}
+
+================================================================================
+5. ADMIN PORTAL FEATURES
+================================================================================
+
+With these collections, your admin portal can:
+
+PRODUCT MANAGEMENT:
+✓ View all products from /products collection
+✓ Create new products
+✓ Edit existing products (name, price, stock, description, etc.)
+✓ Delete products
+✓ Search and filter products by category, brand, etc.
+
+ORDER MANAGEMENT:
+✓ View all orders across all users
+✓ Query orders by status (confirmed, processing, shipped, etc.)
+✓ Update order status
+✓ Add admin notes to orders
+✓ View customer details linked to orders
+✓ View order timeline and delivery status
+
+================================================================================
+6. IMPORTANT NOTES
+================================================================================
+
+1. Orders are stored in subcollections under /users/{userId}/orders/
+   - This means you need to query ALL user documents and their order subcollections
+   - OR set up a master orders collection if you want direct querying
+
+2. Firebase Configuration is the SAME for both app and admin portal
+   - Both connect to "onway-f5999" project
+   - Both read/write to the same collections
+
+3. Timestamps in Firestore:
+   - Use Firebase Timestamp objects (not regular JavaScript Date)
+   - When displaying to users, convert to readable format
+
+4. Access Control:
+   - Consider implementing Firebase Rules to allow only admin access
+   - You may want to add an 'isAdmin' field to users collection for authorization
+
+5. Images:
+   - Product images are stored as URLs (likely in Cloudinary)
+   - Not stored directly in Firestore
+
+================================================================================
