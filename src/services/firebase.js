@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
+import { getAuth } from 'firebase/auth'
 
 // Firebase configuration
 const firebaseConfig = {
@@ -12,11 +13,18 @@ const firebaseConfig = {
   measurementId: 'G-8F47CPBZD8',
 }
 
-// Initialize Firebase
+// Initialize Firebase Primary App
 const app = initializeApp(firebaseConfig)
+
+// Initialize Firebase Secondary App (Used exclusively for creating partner accounts without logging out Admin)
+const secondaryApp = initializeApp(firebaseConfig, 'Secondary')
 
 // Initialize Firestore
 export const db = getFirestore(app)
+
+// Initialize Auth
+export const auth = getAuth(app)
+export const secondaryAuth = getAuth(secondaryApp)
 
 console.log('✅ Firebase initialized for admin dashboard')
 

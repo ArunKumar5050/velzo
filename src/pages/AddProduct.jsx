@@ -16,14 +16,12 @@ export const AddProduct = () => {
     name: '',
     price: '',
     originalPrice: '',
-    category: '',
+    categories: [], // changed from category string to categories array
     description: '',
     imageUrl: '',
     imageFile: null,
     stock: '',
     brand: '',
-    warranty: '',
-    returnDays: '',
   })
 
   const handleChange = (e) => {
@@ -78,6 +76,47 @@ export const AddProduct = () => {
     }
   }
 
+  const handleCategoryToggle = (category) => {
+    setFormData((prev) => {
+      const isSelected = prev.categories.includes(category)
+      return {
+        ...prev,
+        categories: isSelected
+          ? prev.categories.filter((c) => c !== category)
+          : [...prev.categories, category],
+      }
+    })
+  }
+
+  const CATEGORIES = [
+    "Vitamins & Supplements",
+    "Homeopathic Medicine",
+    "Monitoring Devices",
+    "Protein & Supplements",
+    "Sexual Wellness",
+    "Ayurvedic Wellness",
+    "Food & Nutrition",
+    "Skin Care",
+    "Men Care",
+    "Women Care",
+    "Pain Relief",
+    "Hair Care",
+    "Oral Care",
+    "Cold, Cough & Flu",
+    "First Aid",
+    "Mental Wellness",
+    "Baby Care",
+    "Respiratory Care",
+    "Medicine",
+    "Pharmacy",
+    "Lab Tests",
+    "Consultant",
+    "Sunscreen",
+    "Face Wash",
+    "Lip Care",
+    "Soap & Body Wash"
+  ]
+
   const handleSubmit = async (e) => {
     e.preventDefault()
 
@@ -104,14 +143,16 @@ export const AddProduct = () => {
 
       // Add optional fields if provided
       if (formData.originalPrice) productData.originalPrice = parseFloat(formData.originalPrice)
-      if (formData.category) productData.category = formData.category
+      if (formData.categories && formData.categories.length > 0) {
+        productData.category = formData.categories // Store as array but keep 'category' key for compatibility if needed, or update consumers
+      } else {
+        productData.category = []
+      }
       if (formData.description) productData.description = formData.description
       // imageUrl will contain the Cloudinary URL after upload
       if (formData.imageUrl) productData.imageUrl = formData.imageUrl
       if (formData.stock) productData.stock = parseInt(formData.stock) || 0
       if (formData.brand) productData.brand = formData.brand
-      if (formData.warranty) productData.warranty = formData.warranty
-      if (formData.returnDays) productData.returnDays = parseInt(formData.returnDays) || 0
 
       await addProduct(productData)
       toast.success('Product added successfully!')
@@ -154,21 +195,22 @@ export const AddProduct = () => {
           {/* Category */}
           <div>
             <label className="block text-sm font-semibold text-gray-900 mb-2">
-              Category
+              Categories
             </label>
-            <select
-              name="category"
-              value={formData.category}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-            >
-              <option value="">-- Select or leave blank --</option>
-              <option value="grocery">Grocery</option>
-              <option value="beauty">Beauty</option>
-              <option value="medicine">Medicine</option>
-              <option value="baby">Baby</option>
-              <option value="electronic">Electronic</option>
-            </select>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-h-60 overflow-y-auto p-4 border border-gray-200 rounded-lg bg-gray-50">
+              {CATEGORIES.map((cat) => (
+                <label key={cat} className="flex items-center space-x-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={formData.categories.includes(cat)}
+                    onChange={() => handleCategoryToggle(cat)}
+                    className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                  />
+                  <span className="text-sm text-gray-700 select-none">{cat}</span>
+                </label>
+              ))}
+            </div>
+            <p className="text-xs text-gray-500 mt-2">Select one or more categories for this product.</p>
           </div>
 
           {/* Price */}
@@ -311,36 +353,6 @@ export const AddProduct = () => {
             </div>
           </div>
 
-          {/* Warranty & Return Days */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-semibold text-gray-900 mb-2">
-                Warranty
-              </label>
-              <input
-                type="text"
-                name="warranty"
-                value={formData.warranty}
-                onChange={handleChange}
-                placeholder="e.g., 1 Year, 2 Years"
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold text-gray-900 mb-2">
-                Return Days
-              </label>
-              <input
-                type="number"
-                name="returnDays"
-                value={formData.returnDays}
-                onChange={handleChange}
-                placeholder="0"
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-              />
-            </div>
-          </div>
 
           {/* Buttons */}
           <div className="flex gap-3 pt-6 border-t border-gray-200">

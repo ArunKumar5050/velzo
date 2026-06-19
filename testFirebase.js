@@ -1,6 +1,6 @@
-// Quick Firebase test script
 import { initializeApp } from 'firebase/app'
-import { getFirestore, collection, getDocs } from 'firebase/firestore'
+import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore'
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCHPn-jMxmflg2cJPccFFue8o1SpSzVyNM',
@@ -14,34 +14,25 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
+const auth = getAuth(app)
 
-console.log('🔍 Testing Firebase connection...')
-console.log('Firebase initialized:', app.name)
-console.log('Firestore DB:', db)
-
-// Test getting products
-const testGetProducts = async () => {
+const makeAdmin = async () => {
   try {
-    console.log('\n📊 Fetching from "products" collection...')
-    const snapshot = await getDocs(collection(db, 'products'))
-    console.log(`✅ Got snapshot with ${snapshot.size} documents`)
+    const cred = await signInWithEmailAndPassword(auth, 'arunprajapat629@gmail.com', 'Karan@6684')
+    const uid = cred.user.uid
+    console.log('Logged in! UID:', uid)
     
-    const products = []
-    snapshot.forEach((doc) => {
-      console.log(`Document ID: ${doc.id}`)
-      console.log(`Data:`, doc.data())
-      products.push({ id: doc.id, ...doc.data() })
-    })
-    
-    console.log(`\n✅ Total products fetched: ${products.length}`)
-    console.log('Products:', JSON.stringify(products, null, 2))
-    
-    return products
-  } catch (error) {
-    console.error('❌ Error fetching products:', error)
-    console.error('Error code:', error.code)
-    console.error('Error message:', error.message)
+    const adminRef = doc(db, 'adminUsers', uid)
+    const adminDoc = await getDoc(adminRef)
+    if (!adminDoc.exists()) {
+      console.log('Creating admin record...')
+      await setDoc(adminRef, { role: 'admin', email: 'arunprajapat629@gmail.com' })
+      console.log('Admin record created!')
+    } else {
+      console.log('Admin record already exists:', adminDoc.data())
+    }
+  } catch(e) {
+    console.error(e)
   }
 }
-
-testGetProducts()
+makeAdmin()

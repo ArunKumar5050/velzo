@@ -9,6 +9,7 @@ import {
   Timestamp,
   collectionGroup,
   onSnapshot,
+  where
 } from 'firebase/firestore'
 import { db } from './firebase'
 
@@ -30,11 +31,17 @@ export const getOrders = async () => {
       groupSnapshot.forEach((orderDoc) => {
         const ref = orderDoc.ref
         const pathSegments = ref.path.split('/')
-        const userId = pathSegments[1] // users/{userId}/orders/{orderId}
+        
+        // Handle both users/{userId}/orders/{orderId} and top-level orders/{orderId}
+        let userId = orderDoc.data().userId || 'unknown'
+        if (pathSegments.length >= 4 && pathSegments[0] === 'users') {
+          userId = pathSegments[1]
+        }
         
         orders.push({
           id: orderDoc.id,
           userId: userId,
+          _path: ref.path, // Store exact path for updates
           ...orderDoc.data(),
         })
       })
@@ -100,6 +107,7 @@ export const getOrders = async () => {
               orders.push({
                 id: orderDoc.id,
                 userId: userId,
+                _path: orderDoc.ref.path,
                 userName: userData.name || 'Unknown',
                 userEmail: userData.email || '',
                 userPhone: userData.phone || '',
@@ -154,12 +162,13 @@ export const addOrder = async (userId, orderData) => {
 }
 
 // Update an order
-export const updateOrder = async (userId, orderId, orderData) => {
+export const updateOrder = async (userId, orderId, orderData, existingPath = null) => {
   try {
-    console.log(`📝 Updating order ${orderId} for user ${userId}`)
+    console.log(`📝 Updating order ${orderId}`)
     console.log('📝 New data:', orderData)
     
-    const orderRef = doc(db, 'users', userId, 'orders', orderId)
+    // Use the exact path if provided, otherwise fallback to the nested path
+    const orderRef = existingPath ? doc(db, existingPath) : doc(db, 'users', userId, 'orders', orderId)
     
     const updatePayload = {
       ...orderData,
@@ -195,11 +204,16 @@ export const listenToAllOrders = (onSuccess, onError) => {
         snapshot.forEach((orderDoc) => {
           const ref = orderDoc.ref
           const pathSegments = ref.path.split('/')
-          const userId = pathSegments[1] // users/{userId}/orders/{orderId}
+          
+          let userId = orderDoc.data().userId || 'unknown'
+          if (pathSegments.length >= 4 && pathSegments[0] === 'users') {
+            userId = pathSegments[1]
+          }
 
           orders.push({
             id: orderDoc.id,
             userId: userId,
+            _path: ref.path, // Store exact path for updates
             ...orderDoc.data(),
           })
         })
@@ -247,6 +261,82 @@ export const listenToAllOrders = (onSuccess, onError) => {
     return unsubscribe
   } catch (error) {
     console.error('❌ Error setting up real-time listener:', error)
+    onError(error)
+    return () => {}
+  }
+}
+
+// Real-time listener for store-specific orders
+export const listenToStoreOrders = (storeId, onSuccess, onError) => {
+  console.log(`🔔 Setting up real-time listener for store ${storeId} orders...`)
+  
+  try {
+    const ordersQuery = query(
+      collectionGroup(db, 'orders'),
+      where('assignedStoreId', '==', storeId)
+    )
+
+    const unsubscribe = onSnapshot(
+      ordersQuery,
+      async (snapshot) => {
+        console.log(`🔔 Store ${storeId} real-time update: ${snapshot.docs.length} orders`)
+        const orders = []
+
+        snapshot.forEach((orderDoc) => {
+          const ref = orderDoc.ref
+          const pathSegments = ref.path.split('/')
+          
+          let userId = orderDoc.data().userId || 'unknown'
+          if (pathSegments.length >= 4 && pathSegments[0] === 'users') {
+            userId = pathSegments[1]
+          }
+
+          orders.push({
+            id: orderDoc.id,
+            userId: userId,
+            _path: ref.path,
+            ...orderDoc.data(),
+          })
+        })
+
+        orders.sort((a, b) => {
+          const timeA = a.updatedAt?.toMillis?.() || a.createdAt?.toMillis?.() || 0
+          const timeB = b.updatedAt?.toMillis?.() || b.createdAt?.toMillis?.() || 0
+          return timeB - timeA
+        })
+
+        if (orders.length > 0) {
+          const userIds = [...new Set(orders.map(o => o.userId))]
+          for (const userId of userIds) {
+            try {
+              const userDoc = await getDoc(doc(db, 'users', userId))
+              if (userDoc.exists()) {
+                const userData = userDoc.data()
+                orders.forEach(order => {
+                  if (order.userId === userId) {
+                    order.userName = userData.name || 'Unknown'
+                    order.userEmail = userData.email || ''
+                    order.userPhone = userData.phone || ''
+                  }
+                })
+              }
+            } catch (e) {
+              console.warn(`Could not fetch user ${userId}:`, e.message)
+            }
+          }
+        }
+
+        onSuccess(orders)
+      },
+      (error) => {
+        console.error('❌ Store real-time listener error:', error.message)
+        onError(error)
+      }
+    )
+
+    return unsubscribe
+  } catch (error) {
+    console.error('❌ Error setting up store real-time listener:', error)
     onError(error)
     return () => {}
   }

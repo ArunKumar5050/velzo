@@ -7,13 +7,46 @@ import { LoadingSpinner, EmptyState } from '../components/LoadingSpinner'
 import { Modal } from '../components/Modal'
 import { getProducts, deleteProduct } from '../services/productService'
 import toast from 'react-hot-toast'
+import { useAuth } from '../context/AuthContext'
 
 export const Products = () => {
+  const { isAdmin } = useAuth()
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
   const [deleteModal, setDeleteModal] = useState({ isOpen: false, productId: null })
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('')
   const navigate = useNavigate()
   const location = useLocation()
+
+  const CATEGORIES = [
+    "Vitamins & Supplements",
+    "Homeopathic Medicine",
+    "Monitoring Devices",
+    "Protein & Supplements",
+    "Sexual Wellness",
+    "Ayurvedic Wellness",
+    "Food & Nutrition",
+    "Skin Care",
+    "Men Care",
+    "Women Care",
+    "Pain Relief",
+    "Hair Care",
+    "Oral Care",
+    "Cold, Cough & Flu",
+    "First Aid",
+    "Mental Wellness",
+    "Baby Care",
+    "Respiratory Care",
+    "Medicine",
+    "Pharmacy",
+    "Lab Tests",
+    "Consultant",
+    "Sunscreen",
+    "Face Wash",
+    "Lip Care",
+    "Soap & Body Wash"
+  ]
 
   useEffect(() => {
     fetchProducts()
@@ -47,6 +80,24 @@ export const Products = () => {
 
   if (loading) return <LoadingSpinner message="Loading products..." />
 
+  const filteredProducts = products.filter((p) => {
+    const searchMatch =
+      p.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.brand?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.id?.toLowerCase().includes(searchQuery.toLowerCase())
+
+    let categoryMatch = true
+    if (selectedCategory) {
+      if (Array.isArray(p.category)) {
+        categoryMatch = p.category.includes(selectedCategory)
+      } else {
+        categoryMatch = p.category === selectedCategory
+      }
+    }
+
+    return searchMatch && categoryMatch
+  })
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -55,14 +106,43 @@ export const Products = () => {
           <h1 className="text-3xl font-bold text-gray-900">Products</h1>
           <p className="text-gray-600 mt-2">Manage your product inventory</p>
         </div>
-        <Button
-          variant="primary"
-          size="lg"
-          onClick={() => navigate('/add-product')}
-        >
-          <Plus size={20} />
-          Add Product
-        </Button>
+        {isAdmin && (
+          <Button
+            variant="primary"
+            size="lg"
+            onClick={() => navigate('/add-product')}
+          >
+            <Plus size={20} />
+            Add Product
+          </Button>
+        )}
+      </div>
+
+      {/* Filters */}
+      <div className="bg-white p-4 rounded-xl shadow-soft flex flex-col sm:flex-row gap-4 border border-gray-100">
+        <div className="flex-1">
+          <input
+            type="text"
+            placeholder="Search products by name, brand, or ID..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+          />
+        </div>
+        <div className="sm:w-64 flex-shrink-0">
+          <select
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 bg-white"
+          >
+            <option value="">All Categories</option>
+            {CATEGORIES.map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       {/* Products Grid/Table */}
@@ -73,18 +153,27 @@ export const Products = () => {
             title="No products yet"
             description="Create your first product to get started"
             action={
-              <Button
-                variant="primary"
-                onClick={() => navigate('/add-product')}
-              >
-                Add Product
-              </Button>
+              isAdmin ? (
+                <Button
+                  variant="primary"
+                  onClick={() => navigate('/add-product')}
+                >
+                  Add Product
+                </Button>
+              ) : null
             }
+          />
+        </Card>
+      ) : filteredProducts.length === 0 ? (
+        <Card>
+          <EmptyState
+            title="No matches found"
+            description="Try adjusting your search or category filter"
           />
         </Card>
       ) : (
         <div className="space-y-4">
-          {products.map((product, index) => {
+          {filteredProducts.map((product, index) => {
             try {
               return (
                 <Card key={product.id || product.docId || index} className="hover:shadow-card transition-all duration-200">
@@ -144,11 +233,21 @@ export const Products = () => {
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
                         {/* Category */}
                         {product.category && (
-                          <div>
-                            <p className="text-xs text-gray-600">Category</p>
-                            <span className="text-xs inline-block px-2 py-1 rounded-full bg-blue-50 text-blue-700 font-medium">
-                              {product.category}
-                            </span>
+                          <div className="col-span-2">
+                            <p className="text-xs text-gray-600 mb-1">Categories</p>
+                            <div className="flex flex-wrap gap-1">
+                              {Array.isArray(product.category) ? (
+                                product.category.map((cat, i) => (
+                                  <span key={i} className="text-xs inline-block px-2 py-1 rounded-full bg-blue-50 text-blue-700 font-medium">
+                                    {cat}
+                                  </span>
+                                ))
+                              ) : (
+                                <span className="text-xs inline-block px-2 py-1 rounded-full bg-blue-50 text-blue-700 font-medium">
+                                  {product.category}
+                                </span>
+                              )}
+                            </div>
                           </div>
                         )}
 
@@ -159,30 +258,6 @@ export const Products = () => {
                             <p className={`text-sm font-semibold ${product.stock > 0 ? 'text-green-600' : 'text-red-600'}`}>
                               {product.stock} units
                             </p>
-                          </div>
-                        )}
-
-                        {/* Warranty */}
-                        {product.warranty && (
-                          <div>
-                            <p className="text-xs text-gray-600">Warranty</p>
-                            <p className="text-sm font-semibold text-gray-900">{product.warranty}</p>
-                          </div>
-                        )}
-
-                        {/* Delivery Time */}
-                        {product.deliveryTime && (
-                          <div>
-                            <p className="text-xs text-gray-600">Delivery</p>
-                            <p className="text-sm font-semibold text-gray-900">{product.deliveryTime} hours</p>
-                          </div>
-                        )}
-
-                        {/* Return Days */}
-                        {product.returnDays && (
-                          <div>
-                            <p className="text-xs text-gray-600">Returns</p>
-                            <p className="text-sm font-semibold text-gray-900">{product.returnDays} days</p>
                           </div>
                         )}
                       </div>
@@ -200,13 +275,15 @@ export const Products = () => {
                       >
                         <Edit2 size={18} />
                       </button>
-                      <button
-                        onClick={() => setDeleteModal({ isOpen: true, productId: product.id })}
-                        className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors duration-200"
-                        title="Delete"
-                      >
-                        <Trash2 size={18} />
-                      </button>
+                      {isAdmin && (
+                        <button
+                          onClick={() => setDeleteModal({ isOpen: true, productId: product.id })}
+                          className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors duration-200"
+                          title="Delete"
+                        >
+                          <Trash2 size={18} />
+                        </button>
+                      )}
                     </div>
                   </div>
                 </Card>

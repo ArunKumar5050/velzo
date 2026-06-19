@@ -12,9 +12,9 @@ export const Modal = ({ isOpen, onClose, title, children, maxWidth = 'md' }) => 
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className={`bg-white rounded-2xl shadow-card w-full ${widthClasses[maxWidth]} animate-fadeIn`}>
+      <div className={`bg-white rounded-2xl shadow-card w-full ${widthClasses[maxWidth]} animate-fadeIn max-h-[90vh] flex flex-col`}>
         {/* Header */}
-        <div className="p-6 border-b border-gray-200 flex items-center justify-between">
+        <div className="p-6 border-b border-gray-200 flex items-center justify-between flex-shrink-0">
           <h3 className="text-lg font-bold text-gray-900">{title}</h3>
           <button
             onClick={onClose}
@@ -25,7 +25,7 @@ export const Modal = ({ isOpen, onClose, title, children, maxWidth = 'md' }) => 
         </div>
 
         {/* Content */}
-        <div className="p-6">{children}</div>
+        <div className="p-6 overflow-y-auto">{children}</div>
       </div>
     </div>
   )

@@ -1,48 +1,76 @@
 import { useEffect, useState } from 'react'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, MapPin } from 'lucide-react'
 import Card from '../components/Card'
 import { LoadingSpinner, EmptyState } from '../components/LoadingSpinner'
 import { StatusBadge } from '../components/Modal'
-import { listenToAllOrders, updateOrder } from '../services/orderService'
+import { listenToAllOrders, listenToStoreOrders, updateOrder } from '../services/orderService'
+import { autoAssignUnassignedOrders } from '../services/assignmentService'
 import toast from 'react-hot-toast'
+import { useAuth } from '../context/AuthContext'
 
 export const Orders = () => {
+  const { isAdmin, isMedicalStore, entityId } = useAuth()
   const [orders, setOrders] = useState([])
   const [loading, setLoading] = useState(true)
   const [expandedOrder, setExpandedOrder] = useState(null)
   const [updatingOrderId, setUpdatingOrderId] = useState(null)
+  const [isAssigning, setIsAssigning] = useState(false)
+  const [selectedLocation, setSelectedLocation] = useState('All')
+
+  const LOCATIONS = ['All', 'Salasar', 'Khatushyam', 'Sanwariya Seth', 'Ujjain', 'Vrindavan']
 
   useEffect(() => {
     console.log('📝 Orders.jsx: Setting up real-time listener...')
     setLoading(true)
 
-    // Set up real-time listener
-    const unsubscribe = listenToAllOrders(
-      (orders) => {
-        console.log('📝 Orders.jsx: Real-time update received:', orders.length, 'orders')
-        setOrders(orders)
-        setLoading(false)
-      },
-      (error) => {
-        console.error('📝 Orders.jsx: Listener error:', error)
-        toast.error('Failed to load orders')
-        setLoading(false)
-      }
-    )
+    const handleOrdersUpdate = (fetchedOrders) => {
+      console.log('📝 Orders.jsx: Real-time update received:', fetchedOrders.length, 'orders')
+      setOrders(fetchedOrders)
+      setLoading(false)
+    }
 
-    // Cleanup listener when component unmounts
+    const handleError = (error) => {
+      console.error('📝 Orders.jsx: Listener error:', error)
+      toast.error('Failed to load orders')
+      setLoading(false)
+    }
+
+    let unsubscribe = () => {}
+
+    if (isAdmin) {
+      unsubscribe = listenToAllOrders(handleOrdersUpdate, handleError)
+    } else if (isMedicalStore && entityId) {
+      unsubscribe = listenToStoreOrders(entityId, handleOrdersUpdate, handleError)
+    }
+
     return () => {
       console.log('🔌 Orders.jsx: Cleaning up real-time listener')
       unsubscribe()
     }
-  }, [])
+  }, [isAdmin, isMedicalStore, entityId])
 
-  const handleStatusChange = async (orderId, newStatus, userId) => {
+  const handleAutoAssign = async () => {
+    try {
+      setIsAssigning(true)
+      const count = await autoAssignUnassignedOrders(orders)
+      if (count > 0) {
+        toast.success(`Successfully assigned ${count} orders`)
+      } else {
+        toast.info('No unassigned orders found with valid pincodes')
+      }
+    } catch (error) {
+      toast.error('Failed to auto-assign orders')
+    } finally {
+      setIsAssigning(false)
+    }
+  }
+
+  const handleStatusChange = async (orderId, newStatus, userId, existingPath) => {
     try {
       setUpdatingOrderId(orderId)
       console.log(`📝 Updating order ${orderId} to status: ${newStatus}`)
       
-      await updateOrder(userId, orderId, { status: newStatus })
+      await updateOrder(userId, orderId, { status: newStatus }, existingPath)
       
       console.log(`✅ Order ${orderId} updated successfully`)
       toast.success(`Order status updated to ${newStatus}`)
@@ -55,27 +83,62 @@ export const Orders = () => {
     }
   }
 
+  const filteredOrders = selectedLocation === 'All' 
+    ? orders 
+    : orders.filter(o => o.storeLocation === selectedLocation)
+
   if (loading) return <LoadingSpinner message="Loading orders..." />
 
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div>
-        <h1 className="text-3xl font-bold text-gray-900">Orders</h1>
-        <p className="text-gray-600 mt-2">Manage customer orders and track shipments</p>
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div>
+          <h1 className="text-3xl font-bold text-gray-900">Orders</h1>
+          <p className="text-gray-600 mt-2">Manage customer orders and track shipments</p>
+        </div>
+        
+        <div className="flex items-center gap-4">
+          {isAdmin && (
+            <button
+              onClick={handleAutoAssign}
+              disabled={isAssigning}
+              className={`px-4 py-2 bg-blue-600 text-white rounded-lg shadow-sm font-medium hover:bg-blue-700 transition-colors ${
+                isAssigning ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
+            >
+              {isAssigning ? 'Assigning...' : 'Auto-Assign Orders'}
+            </button>
+          )}
+
+          {isAdmin && (
+            <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-200">
+              <MapPin size={18} className="text-gray-500" />
+              <select 
+                value={selectedLocation}
+                onChange={(e) => setSelectedLocation(e.target.value)}
+                className="bg-transparent outline-none text-gray-700 font-medium cursor-pointer"
+              >
+                {LOCATIONS.map(loc => (
+                  <option key={loc} value={loc}>{loc === 'All' ? 'All Locations' : loc}</option>
+                ))}
+              </select>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Orders List */}
-      {orders.length === 0 ? (
+      {filteredOrders.length === 0 ? (
         <Card>
           <EmptyState
-            title="No orders yet"
+            title={selectedLocation === 'All' ? "No orders yet" : `No orders for ${selectedLocation}`}
             description="Orders will appear here when customers place them"
           />
         </Card>
       ) : (
         <div className="space-y-4">
-          {orders.map((order) => (
+          {filteredOrders.map((order) => (
             <Card key={order.id} className="animate-fadeIn hover:shadow-card transition-all duration-200">
               {/* Order Header */}
               <div
@@ -87,8 +150,13 @@ export const Orders = () => {
                 <div className="flex-1">
                   <div className="flex items-center gap-4">
                     <div className="flex-1">
-                      <h3 className="font-semibold text-gray-900">
+                      <h3 className="font-semibold text-gray-900 flex items-center gap-2">
                         Order {order.id.substring(0, 8)}
+                        {order.storeLocation && (
+                          <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                            {order.storeLocation}
+                          </span>
+                        )}
                       </h3>
                       <p className="text-sm text-gray-500 mt-1">
                         {order.userName || 'User'} • {order.items?.length || 0} items • ₹{order.totalAmount || 0}
@@ -141,15 +209,15 @@ export const Orders = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-600">Subtotal</p>
-                      <p className="font-semibold text-gray-900 mt-1">${order.subtotal || 0}</p>
+                      <p className="font-semibold text-gray-900 mt-1">₹{order.subtotal || 0}</p>
                     </div>
                     <div>
                       <p className="text-sm text-gray-600">Delivery Fee</p>
-                      <p className="font-semibold text-gray-900 mt-1">${order.deliveryFee || 0}</p>
+                      <p className="font-semibold text-gray-900 mt-1">₹{order.deliveryFee || 0}</p>
                     </div>
                     <div>
                       <p className="text-sm text-gray-600">Tax</p>
-                      <p className="font-semibold text-gray-900 mt-1">${order.tax || 0}</p>
+                      <p className="font-semibold text-gray-900 mt-1">₹{order.tax || 0}</p>
                     </div>
                     <div className="md:col-span-1">
                       <p className="text-sm text-gray-600">Total Amount</p>
@@ -187,9 +255,9 @@ export const Orders = () => {
                             <div className="flex-1">
                               <p className="font-medium text-gray-900">{item.name}</p>
                               <p className="text-xs text-gray-500">{item.brand}</p>
-                              <p className="text-xs text-gray-600 mt-1">Qty: {item.quantity} × ${item.price}</p>
+                              <p className="text-xs text-gray-600 mt-1">Qty: {item.quantity} × ₹{item.price}</p>
                             </div>
-                            <p className="font-semibold text-gray-900">${item.price * item.quantity}</p>
+                            <p className="font-semibold text-gray-900">₹{item.price * item.quantity}</p>
                           </div>
                         ))}
                       </div>
@@ -218,16 +286,16 @@ export const Orders = () => {
                     </div>
                   )}
 
-                  {/* Status Management */}
+                  {/* Status Management - Cannot cancel/delete if not admin */}
                   <div className="pt-4 border-t border-gray-200">
                     <label className="block text-sm font-semibold text-gray-900 mb-3">
                       Update Status
                     </label>
                     <div className="flex flex-wrap gap-2">
-                      {['confirmed', 'processing', 'shipped', 'in-transit', 'delivered', 'cancelled'].map((status) => (
+                      {['confirmed', 'processing', 'shipped', 'in-transit', 'delivered', ...(isAdmin ? ['cancelled'] : [])].map((status) => (
                         <button
                           key={status}
-                          onClick={() => handleStatusChange(order.id, status, order.userId)}
+                          onClick={() => handleStatusChange(order.id, status, order.userId, order._path)}
                           disabled={updatingOrderId === order.id}
                           className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 text-sm whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed ${
                             order.status === status
@@ -265,32 +333,35 @@ export const Orders = () => {
       )}
 
       {/* Summary Stats */}
-      {orders.length > 0 && (
+      {filteredOrders.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
           <Card>
             <p className="text-gray-600 text-sm">Confirmed Orders</p>
             <p className="text-3xl font-bold text-blue-600 mt-2">
-              {orders.filter((o) => o.status === 'confirmed').length}
+              {filteredOrders.filter((o) => o.status === 'confirmed').length}
             </p>
           </Card>
           <Card>
             <p className="text-gray-600 text-sm">In Transit</p>
             <p className="text-3xl font-bold text-orange-600 mt-2">
-              {orders.filter((o) => ['processing', 'shipped', 'in-transit'].includes(o.status)).length}
+              {filteredOrders.filter((o) => ['processing', 'shipped', 'in-transit'].includes(o.status)).length}
             </p>
           </Card>
           <Card>
             <p className="text-gray-600 text-sm">Delivered Orders</p>
             <p className="text-3xl font-bold text-green-600 mt-2">
-              {orders.filter((o) => o.status === 'delivered').length}
+              {filteredOrders.filter((o) => o.status === 'delivered').length}
             </p>
           </Card>
-          <Card>
-            <p className="text-gray-600 text-sm">Total Revenue</p>
-            <p className="text-3xl font-bold text-purple-600 mt-2">
-              ₹{orders.reduce((sum, o) => sum + (o.totalAmount || 0), 0)}
-            </p>
-          </Card>
+          {/* Total Revenue - Admin Only */}
+          {isAdmin && (
+            <Card>
+              <p className="text-gray-600 text-sm">Total Revenue</p>
+              <p className="text-3xl font-bold text-purple-600 mt-2 truncate">
+                ₹{Math.round(filteredOrders.reduce((sum, o) => sum + (o.totalAmount || 0), 0)).toLocaleString('en-IN')}
+              </p>
+            </Card>
+          )}
         </div>
       )}
     </div>

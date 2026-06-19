@@ -1,0 +1,784 @@
+name,price,stock_quantity,description,brand
+AMOXYCLAV 625 TAB,120,2,Antibiotic tablet used for bacterial infections,ABBOTT
+AMOXYCLAV DRY SYP 30ML,35,2,Antibiotic dry syrup for bacterial infections,ABBOTT
+AMOXYCLAV -1.2GM INJ,110,2,Antibiotic injection for bacterial infections,ABBOTT
+AMOXYCLAV 375 TAB,,2,Antibiotic tablet,ABBOTT
+ABIXIM 200 TAB,96.46,2,Cefixime tablet used for bacterial infections,ABBOTT
+ABIXIM O TAB,,2,Antibiotic tablet,ABBOTT
+AMOXYCLAV 1000MG TAB,,2,Antibiotic tablet,ABBOTT
+SAFEXIM 200 TAB,,2,Antibiotic tablet,ABBOTT
+OMNATAX-O DRY SYRUP,38.5,2,Dry syrup used for bacterial infections,ABBOTT
+DICLOFAM PLUS TAB,,2,Pain relief tablet,ABBOTT
+C-ONE 1GM INJECTION,32,2,Antibiotic injection,ABBOTT
+C-ONE SB 1.5GM INJECTION,215,2,Antibiotic injection,ABBOTT
+C-ONE SB 375MG INJECTION,,2,Antibiotic injection,ABBOTT
+NKACIN 100MG INJECTION,39.32,2,Antibiotic injection,ABBOTT
+NKACIN 250MG INJECTION,62.82,2,Antibiotic injection,ABBOTT
+NKACIN 500MG INJECTION,113.73,2,Antibiotic injection,ABBOTT
+OMNATAX 200MG TAB,,2,Antibiotic tablet,ABBOTT
+OZOLE-D CAPS,27,2,Acid reflux capsule,ABBOTT
+PHENSEDYL DX 100ML,122.82,2,Cough syrup,ABBOTT
+PHENSEDYL DX 60ML,,2,Cough syrup,ABBOTT
+PHENSEDYL DX ADVANCED 100ML,,2,Cough syrup,ABBOTT
+CHUPP DX 100ML,,2,Cough syrup,ABBOTT
+PIPRATAZ-4.5GM INJECTION,,2,Antibiotic injection,ABBOTT
+R-ZOLE DSR CAPS,,2,Acid reflux capsule,ABBOTT
+ROFEX 500 CAPS,,2,Antibiotic capsule,ABBOTT
+RONEMOX-125DT,,2,Antibiotic tablet,ABBOTT
+RONEMOX-250 DT,,2,Antibiotic tablet,ABBOTT
+RONEMOX-500 CAPS,,2,Antibiotic capsule,ABBOTT
+MEGAMOX-CV 625 TAB,,2,Antibiotic tablet,ABBOTT
+SAFEPODOX DRY SYRUP,,2,Antibiotic dry syrup,ABBOTT
+SAFEPODOX 200 TAB,,2,Antibiotic tablet,ABBOTT
+SAFEPODOX-O TAB,,2,Antibiotic tablet,ABBOTT
+ZITHROLECT-250 TAB,,2,Antibiotic tablet,ABBOTT
+ZITHROLECT-500 TAB,,2,Antibiotic tablet,ABBOTT
+FLOXIP-250 TAB,,2,Antibiotic tablet,ABBOTT
+FLOXIP-500 TAB,,2,Antibiotic tablet,ABBOTT
+FLOXIP-500 (ALU-ALU),,2,Antibiotic tablet,ABBOTT
+TRUSTY-BR 60ML,,2,Cough syrup,ABBOTT
+TRUSTYL-BR 100ML,,2,Cough syrup,ABBOTT
+ALDIGESIC-P TAB,,2,Pain relief tablet,ALKEM
+ALDIGESIC-SP TAB,,2,Pain relief tablet,ALKEM
+ALMOX-250 CAP,,2,Antibiotic capsule,ALKEM
+ALMOX-500 CAP,,2,Antibiotic capsule,ALKEM
+ALMOX-250DT,,2,Antibiotic dispersible tablet,ALKEM
+ALKEMOX-CV 625,,2,Antibiotic tablet,ALKEM
+ALMOX-CV 625,,2,Antibiotic tablet,ALKEM
+AMIJECT 500 INJ,,2,Antibiotic injection,ALKEM
+AZIKEM 250 TAB,,2,Antibiotic tablet,ALKEM
+AZIKEM 500 TAB,,2,Antibiotic tablet,ALKEM
+ZITHROKEM 250 TAB,,2,Antibiotic tablet,ALKEM
+ZITHROKEM 500 TAB,,2,Antibiotic tablet,ALKEM
+DERMIKEM OC PLUS CREAM,,2,Antifungal cream,ALKEM
+FERCEE RED SYP,,2,Iron supplement syrup,ALKEM
+NEW LAXIKEM PLUS SYRUP,,2,Laxative syrup,ALKEM
+ALPICNO SYRUP,,2,Syrup,ALKEM
+SUMO + PAIN RELIEF GEL,,2,Pain relief gel,ALKEM
+OMEE CAP,,2,Acid reflux capsule,ALKEM
+OMEE-D CAP,,2,Acid reflux capsule,ALKEM
+OMEE MPS (COOL MINT) SYRUP,,2,Antacid syrup,ALKEM
+SUMO SPRAY 35GM,,2,Pain relief spray,ALKEM
+SUMO SPRAY 55GM,,2,Pain relief spray,ALKEM
+L-HIST TAB,,2,Antihistamine tablet,ALKEM
+L-HIST MONT TAB,,2,Antihistamine tablet,ALKEM
+PLAYGARD CONDOM 3PCS,,2,Contraceptive,ALKEM
+PLAYGARD CONDOM 10PCS,,2,Contraceptive,ALKEM
+VENTORANZ-DX 100ML,,2,Cough syrup,ALKEM
+NORFLOKEM-TZ TAB,,2,Antibiotic tablet,ALKEM
+METRON-400 TAB,,2,Antibiotic tablet,ALKEM
+ALCIFLOX-500,,2,Antibiotic tablet,ALKEM
+QMAX 200,,2,Antibiotic tablet,ALKEM
+KETOKEM SOAP,,2,Antifungal soap,ALKEM
+NEW KETOKEM SHAMPOO,,2,Antifungal shampoo,ALKEM
+POWERFLAM-MR TAB,,2,Pain relief tablet,ALKEM
+OFLOKEM-200 (ALU-ALU),,2,Antibiotic tablet,ALKEM
+BIOCOF-BR 60ML,,2,Cough syrup,BIOCHEM
+BIOCOF-BR 100ML,,2,Cough syrup,BIOCHEM
+BIOREX-DX 60ML,,2,Cough syrup,BIOCHEM
+BIOREX-DX 100ML,,2,Cough syrup,BIOCHEM
+BIOSPAS TAB,,2,Antispasmodic tablet,BIOCHEM
+BIOSPAS FORTE TAB,,2,Antispasmodic tablet,BIOCHEM
+BIOSPAS PLUS TAB,,2,Antispasmodic tablet,BIOCHEM
+ITRACHEM 100,,2,Antifungal capsule,BIOCHEM
+ITRACHEM 200,,2,Antifungal capsule,BIOCHEM
+MOXIBOW 400,,2,Antibiotic tablet,BIOCHEM
+BYCALVIT-B12 SYRUP,,2,Vitamin B12 syrup,BIOCHEM
+FERGLOW SYRUP,,2,Iron supplement syrup,BIOCHEM
+FERGLOW TAB,,2,Iron supplement tablet,BIOCHEM
+PEPTILCER-DSR CAP,,2,Acid reflux capsule,BIOCHEM
+BIOSPAS DROP,,2,Antispasmodic drops,BIOCHEM
+BYZYME DROP,,2,Digestive enzyme drops,BIOCHEM
+FERGLOW DROP,,2,Iron supplement drops,BIOCHEM
+SOREXIN DROP,,2,Drops,BIOCHEM
+BIOCAINE GEL,,2,Local anaesthetic gel,BIOCHEM
+BIOCETAMOL DS,,2,Paracetamol syrup,BIOCHEM
+LECET SYP 60ML,,2,Syrup,BIOCHEM
+LECET-AM TAB,,2,Tablet,BIOCHEM
+OSOLAC 100ML,,2,Lactulose syrup,BIOCHEM
+OSOLAC 200ML,,2,Lactulose syrup,BIOCHEM
+DICLOFEN 1ML,,2,Diclofenac injection,BIOCHEM
+DICLOFEN 3ML,,2,Diclofenac injection,BIOCHEM
+ONDIRON-MD,,2,Antiemetic tablet,BIOCHEM
+ONDIRON DROP,,2,Antiemetic drops,BIOCHEM
+PEPTILCER IV INJECTION,,2,Acid reflux injection,BIOCHEM
+BIOCETAMOL DROP,,2,Paracetamol drops,BIOCHEM
+BIODINE 250GM JAR,,2,Antiseptic,BIOCHEM
+CLOZOL OINT,,2,Antifungal ointment,BIOCHEM
+ATENOPRESS-AT,,2,Antihypertensive tablet,BIOCHEM
+BIOHISTIN-8 TAB,,2,Antihistamine tablet,BIOCHEM
+BIOHISTIN-16 TAB,,2,Antihistamine tablet,BIOCHEM
+CINIRONE-D TAB,,2,Tablet,BIOCHEM
+CLOZOL V-6 TAB,,2,Antifungal tablet,BIOCHEM
+CYCLOFEN-SP TAB,,2,Pain relief tablet,BIOCHEM
+DICLOFEN-50 TAB,,2,Pain relief tablet,BIOCHEM
+DICLOFEN 100SR TAB,,2,Pain relief tablet,BIOCHEM
+DICLOFEN-MR TAB,,2,Pain relief tablet,BIOCHEM
+LECET TAB,,2,Tablet,BIOCHEM
+LOSATAN-50,,2,Antihypertensive tablet,BIOCHEM
+LOSATAN-AM,,2,Antihypertensive tablet,BIOCHEM
+LOSATAN-H,,2,Antihypertensive tablet,BIOCHEM
+MIGRON-L 30ML,,2,Syrup,BIOCHEM
+MIGRON-L 60ML,,2,Syrup,BIOCHEM
+ODIFEX-120,,2,Tablet,BIOCHEM
+ODIFEX-180,,2,Tablet,BIOCHEM
+OFLOCHEM-200 ALU/ALU,,2,Antibiotic tablet,BIOCHEM
+PEPTILCER-D TAB,,2,Acid reflux tablet,BIOCHEM
+PREGATRACK CARD,,2,Pregnancy tracker card,BIOCHEM
+BIOCHEMDRYL 60ML,,2,Antihistamine syrup,BIOCHEM
+BIOCHEMDRYL 100ML,,2,Antihistamine syrup,BIOCHEM
+BIOMEZOLE-D CAPS,,2,Acid reflux capsule,BIOCHEM
+MICABAL PLUS CAP,,2,Vitamin B12 capsule,BIOCHEM
+RABICER-DSR CAPS,,2,Acid reflux capsule,BIOCHEM
+BIODEBOL-50INJ,,2,Injection,BIOCHEM
+BIOSONE-100INJ,,2,Steroid injection,BIOCHEM
+BIOSTERONE DEPOT 500INJ,,2,Steroid injection,BIOCHEM
+BONACORT INJ,,2,Steroid injection,BIOCHEM
+DITIM-MF TAB,,2,Tablet,BIOCHEM
+ETHAMO 500 TAB,,2,Antitubercular tablet,BIOCHEM
+FERGLOW-S INJ,,2,Iron supplement injection,BIOCHEM
+BIOFF-CX DS SYRUP,,2,Antibiotic syrup,BIOCHEM
+ALKACITRAL SYRUP,,2,Antacid syrup,BIOCHEM
+AMBROHIST PLUS 60ML,,2,Cough syrup,BIOCHEM
+AMBROHIST PLUS 100ML,,2,Cough syrup,BIOCHEM
+BYZYME 200ML,,2,Digestive enzyme syrup,BIOCHEM
+DEFAC 6 TAB,,2,Steroid tablet,BIOCHEM
+LIVITO 100ML,,2,Liver tonic syrup,BIOCHEM
+LIVITO 200ML,,2,Liver tonic syrup,BIOCHEM
+NCOLD PLUS SYRUP,,2,Cold syrup,BIOCHEM
+PLEXAVIT-L 200ML,,2,Multivitamin syrup,BIOCHEM
+TANCET OVAL TAB,,2,Tablet,BIOCHEM
+TANCET ROUND TAB,,2,Tablet,BIOCHEM
+TANCET-L TAB,,2,Tablet,BIOCHEM
+BIOSCAB LOTION 100ML,,2,Antiscabies lotion,BIOCHEM
+CALAGY LOTION,,2,Calamine lotion,BIOCHEM
+GLIMP-M1,,2,Antidiabetic tablet,BIOCHEM
+GLIMP-M2,,2,Antidiabetic tablet,BIOCHEM
+GLIMP-MP 1,,2,Antidiabetic tablet,BIOCHEM
+GLIMP-MP 2,,2,Antidiabetic tablet,BIOCHEM
+MICABAD-OD TAB,,2,Vitamin B12 tablet,BIOCHEM
+MOXILIUM-250 DT,,2,Antibiotic dispersible tablet,BIOCHEM
+TELMEVAS-40 TAB,,2,Antihypertensive tablet,BIOCHEM
+TELMEVAS-H TAB,,2,Antihypertensive tablet,BIOCHEM
+TELMEVAS-AM TAB,,2,Antihypertensive tablet,BIOCHEM
+BIOSORE GEL,,2,Topical gel,BIOCHEM
+CLOSTAF,,2,Antifungal tablet,BIOCHEM
+CLOSTAF-GM,,2,Antifungal cream,BIOCHEM
+FLUSID CREAM,,2,Antifungal cream,BIOCHEM
+FLUSID-B CREAM,,2,Antifungal cream,BIOCHEM
+NO-PILE OINT,,2,Piles ointment,BIOCHEM
+PODOCEF-50 SYRUP,,2,Antibiotic syrup,BIOCHEM
+PODOCEF-100 DRY SYRUP,,2,Antibiotic dry syrup,BIOCHEM
+PODOCEF-200 TAB,,2,Antibiotic tablet,BIOCHEM
+EVERFRESH TEARS DROP,,2,Eye drops,BIOCHEM
+BIOMETHRIN OINT,,2,Antiscabies ointment,BIOCHEM
+TOYDOM DROP,,2,Ear drops,BIOCHEM
+BIOCIL MPS (MINT),,2,Antacid syrup,BIOCHEM
+BIOCIL MPS (SANUF),,2,Antacid syrup,BIOCHEM
+BIOCIL MPS (ORANGE),,2,Antacid syrup,BIOCHEM
+BIOCIL MPS (PINEAPPLE),,2,Antacid syrup,BIOCHEM
+AMLIP-5 TAB,,2,Antihypertensive tablet,CIPLA
+AMLIP-AT TAB,,2,Antihypertensive tablet,CIPLA
+AZICIP 100MG SYP,,2,Antibiotic syrup,CIPLA
+AZICIP 200MG SYP,,2,Antibiotic syrup,CIPLA
+AZICIP 250,,2,Antibiotic tablet,CIPLA
+AZICIP 500,,2,Antibiotic tablet,CIPLA
+BILACIP 20 TAB,,2,Tablet,CIPLA
+BILACIP-M TAB,,2,Tablet,CIPLA
+BURNHEAL CREAM,,2,Burn healing cream,CIPLA
+CEFASYN 250 TAB 4 PACK,,2,Antibiotic tablet,CIPLA
+CEFASYN 500 TAB 4 PACK,,2,Antibiotic tablet,CIPLA
+CEFASYN 500 TAB 10 PACK,,2,Antibiotic tablet,CIPLA
+CEFIX 200 OVAL,,2,Antibiotic tablet,CIPLA
+CEFIX 200 ROUND,,2,Antibiotic tablet,CIPLA
+CEFIX-O TAB,,2,Antibiotic tablet,CIPLA
+CEPHADEX-125 DT,,2,Antibiotic dispersible tablet,CIPLA
+CEPHADEX-250 DT,,2,Antibiotic dispersible tablet,CIPLA
+CEPHADEX 500 CAP,,2,Antibiotic capsule,CIPLA
+CETCIP 10MG,,2,Antihistamine tablet,CIPLA
+CETCIP-L TAB,,2,Antihistamine tablet,CIPLA
+CHESTON COLD SYP,,2,Cold syrup,CIPLA
+CHESTON COLD DS SYP,,2,Cold syrup,CIPLA
+CHESTON COLD TAB (WHITE),,2,Cold tablet,CIPLA
+CHESTON COLD TAB (BLACK),,2,Cold tablet,CIPLA
+CIPCAL D3 SOFT GEL CAP 4 PACK,,2,Calcium + Vitamin D3 capsule,CIPLA
+CIPCAL-500 TAB,,2,Calcium tablet,CIPLA
+CIPCAL-HD TAB,,2,Calcium tablet,CIPLA
+CIPCAL-XT TAB,,2,Calcium tablet,CIPLA
+CIPLACEF 1GM INJ,,2,Antibiotic injection,CIPLA
+CIPLACEF 1.5GM INJ,,2,Antibiotic injection,CIPLA
+CIPLADINE 100ML LOTION,,2,Antiseptic lotion,CIPLA
+CIPLADINE 10GM,,2,Antiseptic ointment,CIPLA
+CIPLADINE 20GM,,2,Antiseptic ointment,CIPLA
+CIPMOX 250 YELLOW,,2,Antibiotic capsule,CIPLA
+CIPMOX 250 RED,,2,Antibiotic capsule,CIPLA
+CIPMOX 500 CAP,,2,Antibiotic capsule,CIPLA
+CIPZEN D,,2,Tablet,CIPLA
+CLEARWAX EAR DROPS,,2,Ear drops,CIPLA
+CLOCIP 75GM,,2,Antifungal cream,CIPLA
+CLOCIP 100GM POWDER,,2,Antifungal powder,CIPLA
+COF-RYL 100ML,,2,Cough syrup,CIPLA
+COFDEX 100ML,,2,Cough syrup,CIPLA
+COFSILS ORANGE JAR,,2,Throat lozenges,CIPLA
+COSART-50,,2,Antihypertensive tablet,CIPLA
+COSART-H,,2,Antihypertensive tablet,CIPLA
+DERICIP RETARD 150,,2,Tablet,CIPLA
+DERICIP RETARD 300,,2,Tablet,CIPLA
+ETHAMCIP-500 TAB,,2,Antitubercular tablet,CIPLA
+FERICIP-XT TAB,,2,Iron supplement tablet,CIPLA
+FLUKA 150 TAB,,2,Antifungal tablet,CIPLA
+FOURDERM 5GM,,2,Antifungal cream,CIPLA
+FOURDERM 10GM,,2,Antifungal cream,CIPLA
+FOURDERM 15GM,,2,Antifungal cream,CIPLA
+FOURDERM 20GM,,2,Antifungal cream,CIPLA
+GLIMDA MV-1,,2,Antidiabetic tablet,CIPLA
+GLIMDA MV-2,,2,Antidiabetic tablet,CIPLA
+ITRACIP 100,,2,Antifungal capsule,CIPLA
+ITRACIP 200,,2,Antifungal capsule,CIPLA
+ITRANOX 200,,2,Antifungal capsule,CIPLA
+KETOCIP 1% SHAMPOO,,2,Antifungal shampoo,CIPLA
+KETOCIP 2% SHAMPOO,,2,Antifungal shampoo,CIPLA
+L-QUIN 500 TAB,,2,Antibiotic tablet,CIPLA
+L-QUIN 750 TAB,,2,Antibiotic tablet,CIPLA
+LEVOQUIN 500 TAB,,2,Antibiotic tablet,CIPLA
+LIPVAS 10 TAB,,2,Cholesterol tablet,CIPLA
+LIPVAS 20 TAB,,2,Cholesterol tablet,CIPLA
+LIPVAS 40 TAB,,2,Cholesterol tablet,CIPLA
+LULITEC CREAM 10GM/20GM/30GM,,2,Antifungal cream,CIPLA
+MOBICAM-DT,,2,Pain relief tablet,CIPLA
+MOVEX-MR TAB,,2,Pain relief tablet,CIPLA
+MOVEX-SP TAB,,2,Pain relief tablet,CIPLA
+MOVEX-PLUS TAB,,2,Pain relief tablet,CIPLA
+PANTOSEC-DSR CAP,,2,Acid reflux capsule,CIPLA
+NEW POWERGYL SYP,,2,Antiprotozoal syrup,CIPLA
+OFLOX OZ SYP,,2,Antibiotic syrup,CIPLA
+NICIP 100,,2,Pain relief tablet,CIPLA
+NICIP DS TAB,,2,Pain relief tablet,CIPLA
+NICIP COLD N FLU TAB,,2,Cold & flu tablet,CIPLA
+NICIP MD TAB,,2,Pain relief tablet,CIPLA
+NICIP PLUS TAB,,2,Pain relief tablet,CIPLA
+NODARD PLUS TAB,,2,Pain relief tablet,CIPLA
+NOVACLAV 625 TAB (10 PACK),,2,Antibiotic tablet,CIPLA
+NOVACLAV 625 (20*6 PACK),,2,Antibiotic tablet,CIPLA
+OMNICLAV 625 (20*6 PACK),,2,Antibiotic tablet,CIPLA
+OKACET TAB,,2,Antihistamine tablet,CIPLA
+OKACET-L TAB,,2,Antihistamine tablet,CIPLA
+NEW OKACET TAB,,2,Antihistamine tablet,CIPLA
+OKAMET 500,,2,Antidiabetic tablet,CIPLA
+OLOX 200 TAB,,2,Antibiotic tablet,CIPLA
+OLOX OZ TAB,,2,Antibiotic tablet,CIPLA
+OMNIGEL 10GM/20GM/30GM/50GM/75GM,,2,Pain relief gel,CIPLA
+OMNIGEL SPRAY 20GM/35GM/55GM/75GM,,2,Pain relief spray,CIPLA
+ORS LIQUID ORANGE/APPLE/MIX FRUIT,,2,Oral rehydration solution,CIPLA
+PANTOSEC 40,,2,Acid reflux tablet,CIPLA
+PANTOSEC-D TAB,,2,Acid reflux tablet,CIPLA
+PARACIP-125MG SYP,,2,Paracetamol syrup,CIPLA
+PARACIP-250MG SYP,,2,Paracetamol syrup,CIPLA
+PARACIP 500 TAB,,2,Paracetamol tablet,CIPLA
+PARACIP-650 TAB,,2,Paracetamol tablet,CIPLA
+PARACIP DROP,,2,Paracetamol drops,CIPLA
+PODOCIP 200,,2,Antibiotic tablet,CIPLA
+RABESEC-20,,2,Acid reflux tablet,CIPLA
+RABESEC-DSR CAP,,2,Acid reflux capsule,CIPLA
+REACTIN-100SR,,2,Pain relief tablet,CIPLA
+REACTIN PLUS TAB RED/WHITE,,2,Pain relief tablet,CIPLA
+REXCOF DX 60ML/100ML,,2,Cough syrup,CIPLA
+REXCOF LS 100ML,,2,Cough syrup,CIPLA
+SPASMONIL TAB,,2,Antispasmodic tablet,CIPLA
+SPASMONIL PLUS TAB,,2,Antispasmodic tablet,CIPLA
+SUHAGRA 100 TAB,,2,Erectile dysfunction tablet,CIPLA
+TADACIP TAB,,2,Erectile dysfunction tablet,CIPLA
+TENEPLA 20,,2,Antidiabetic tablet,CIPLA
+TENEPLA M-500,,2,Antidiabetic tablet,CIPLA
+TENEPLA M-1000,,2,Antidiabetic tablet,CIPLA
+VOMISTOP TAB,,2,Antiemetic tablet,CIPLA
+ROKO CAPS,,2,Capsule,CIPLA
+ABD SUSP,,2,Anthelmintic suspension,INTAS
+ABD PLUS SUSP,,2,Anthelmintic suspension,INTAS
+ABD 400 TAB,,2,Anthelmintic tablet,INTAS
+ABD PLUS TAB,,2,Anthelmintic tablet,INTAS
+APP PLUS SYP 200ML,,2,Appetite syrup,INTAS
+APP UP TAB,,2,Appetite tablet,INTAS
+APP UP SYP 200ML,,2,Appetite syrup,INTAS
+AZINTAS 250 TAB,,2,Antibiotic tablet,INTAS
+AZINTAS 500 TAB,,2,Antibiotic tablet,INTAS
+CALGEL CAP,,2,Calcium capsule,INTAS
+CANDITAS-V GEL,,2,Antifungal vaginal gel,INTAS
+CEROXITUM-500 4TAB,,2,Antibiotic tablet,INTAS
+CEROXITUM-500 10TAB,,2,Antibiotic tablet,INTAS
+DECA-INSTABOLIN 50MG INJ,,2,Anabolic steroid injection,INTAS
+EMENORM 2ML,,2,Injection,INTAS
+EMENORM 10ML,,2,Injection,INTAS
+FOLITAS TAB,,2,Folic acid tablet,INTAS
+HB UP TONIC 200ML,,2,Haemoglobin tonic,INTAS
+INTACID MPS MINT,,2,Antacid suspension,INTAS
+INTAGESIC 1ML,,2,Pain relief injection,INTAS
+INTAGESIC-P TAB,,2,Pain relief tablet,INTAS
+INTAGESIC-MR TAB,,2,Pain relief tablet,INTAS
+INTAZIN-LDN TAB,,2,Tablet,INTAS
+KUFF-Q DX TAB,,2,Cough tablet,INTAS
+KUFFDRYL 100ML,,2,Cough syrup,INTAS
+LACTOLUS-DS TAB,,2,Laxative tablet,INTAS
+NEW NIMUCET 60ML SYP,,2,Pain relief syrup,INTAS
+NICEF-100DT TAB,,2,Antibiotic dispersible tablet,INTAS
+NICEF-200 DT TAB,,2,Antibiotic dispersible tablet,INTAS
+NIMUCET TAB,,2,Pain relief tablet,INTAS
+NIMUCET GOLD TAB 30*10,,2,Pain relief tablet,INTAS
+NIMUCET GOLD TAB 70*10,,2,Pain relief tablet,INTAS
+OFLOTAS-MZ SYP,,2,Antibiotic syrup,INTAS
+OFLOTAS-OZ TAB,,2,Antibiotic tablet,INTAS
+OMEY-DM CAP,,2,Acid reflux capsule,INTAS
+PROTITAS-220GM CHOCOLATE,,2,Protein supplement,INTAS
+RANLOC INJ 2ML,,2,Injection,INTAS
+RATIO-D TAB,,2,Tablet,INTAS
+RATIO-DP TAB,,2,Tablet,INTAS
+SOREGEL CREAM,,2,Topical cream,INTAS
+BECOTAB NF TAB,,2,Vitamin B complex tablet,INTAS
+CHYMOTAS-FORTE TAB,,2,Enzyme tablet,INTAS
+PIROXITAS INJ,,2,Pain relief injection,INTAS
+PIROXITAS-DT TAB,,2,Pain relief tablet,INTAS
+KUFF-D NF 100ML,,2,Cough syrup,INTAS
+L-ZINE TAB,,2,Antihistamine tablet,INTAS
+MECOFOL PLUS CAP,,2,Vitamin B12 capsule,INTAS
+MECOFOL PLUS INJ 2ML,,2,Vitamin B12 injection,INTAS
+MECOFOL-OD TAB,,2,Vitamin B12 tablet,INTAS
+MEGAMENTIN 625 TAB 6 PACK,,2,Antibiotic tablet,INTAS
+MOXINTA-CLAV 625 TAB 10 PACK,,2,Antibiotic tablet,INTAS
+MILFAMIN PLUS SYP,,2,Multivitamin syrup,INTAS
+MONTAS-L TAB 10 TAB,,2,Antiallergic tablet,INTAS
+MONTAS-L TAB 15TAB,,2,Antiallergic tablet,INTAS
+MONTAS-AB TAB,,2,Antiallergic tablet,INTAS
+MONTAS-FX TAB,,2,Antiallergic tablet,INTAS
+MONTAS-L KID TAB,,2,Antiallergic tablet (paediatric),INTAS
+MONTAS-L 30ML,,2,Antiallergic syrup,INTAS
+MONTAS-L 60ML,,2,Antiallergic syrup,INTAS
+MULTICAINE GEL,,2,Local anaesthetic gel,INTAS
+ONDET 2ML,,2,Antiemetic injection,INTAS
+ONDET 10ML,,2,Antiemetic injection,INTAS
+NOZECLEAR DROP,,2,Nasal drops,INTAS
+ONDET MD TAB,,2,Antiemetic tablet,INTAS
+PREGVOM TAB,,2,Antiemetic tablet (pregnancy),INTAS
+PREGVOM PLUS TAB,,2,Antiemetic tablet (pregnancy),INTAS
+SPAZ TAB,,2,Antispasmodic tablet,INTAS
+THROMBOTAS CREAM,,2,Topical cream,INTAS
+TRANTAS-EM TAB,,2,Tablet,INTAS
+TRANTAS-MF TAB,,2,Tablet,INTAS
+CALCITAS-D TAB 20*15,,2,Calcium + Vitamin D tablet,INTAS
+CALCITAS-D3 CAP 20*4,,2,Calcium + Vitamin D3 capsule,INTAS
+CALCITAS SACHET,,2,Calcium sachet,INTAS
+CALCITAS D3 DROP,,2,Calcium + Vitamin D3 drops,INTAS
+FCN 150 TAB,,2,Antifungal tablet,INTAS
+FCN 200 TAB,,2,Antifungal tablet,INTAS
+GEL MPS MINT,,2,Antacid gel,INTAS
+INTACAINE JELLY,,2,Local anaesthetic jelly,INTAS
+INTACOXIA-60 TAB,,2,Pain relief tablet,INTAS
+INTACOXIA-90 TAB,,2,Pain relief tablet,INTAS
+INTACOXIA-120 TAB,,2,Pain relief tablet,INTAS
+INTACOXIA-MR TAB,,2,Pain relief tablet,INTAS
+INTACOXIA-P TAB,,2,Pain relief tablet,INTAS
+KUFFTAS-LS 100ML,,2,Cough syrup,INTAS
+METHYGENE TAB,,2,Tablet,INTAS
+NIMUCET-MF SYP,,2,Pain relief syrup,INTAS
+NIZOL TAB,,2,Antifungal tablet,INTAS
+PCM 2ML INJ,,2,Paracetamol injection,INTAS
+PREVENT-N TAB,,2,Tablet,INTAS
+ZIN SYP 60ML,,2,Zinc syrup,INTAS
+DORINTA INJ,,2,Injection,INTAS
+BECMET-N 15GM,,2,Topical cream,IND SWIFT
+CLOBENATE-GM 10GM,,2,Antifungal cream,IND SWIFT
+CLOBENATE-GM 20GM,,2,Antifungal cream,IND SWIFT
+NEO BECMET-CG 10GM,,2,Topical cream,IND SWIFT
+NEO BECMET-CG 20GM,,2,Topical cream,IND SWIFT
+OVIDINE 15GM,,2,Antiseptic cream,IND SWIFT
+ADVANCED C-TIN PLUS TAB,,2,Vitamin C tablet,IND SWIFT
+ROXY-150 TAB,,2,Antibiotic tablet,IND SWIFT
+NEW AMYCLOX-LB CAP,,2,Antibiotic capsule,IND SWIFT
+N-VIT CAP,,2,Multivitamin capsule,IND SWIFT
+CAFZONE 1GM INJECTION,,2,Antibiotic injection,IND SWIFT
+CAFZONE SB1.5GM INJECTION,,2,Antibiotic injection,IND SWIFT
+DICOLIV-MR TAB,,2,Pain relief tablet,IND SWIFT
+CLAV-DEN DS SYRUP,,2,Antibiotic syrup,IND SWIFT
+VIGORE 100,,2,Erectile dysfunction tablet,ZYDUS/CADILA
+VIGORE 50,,2,Erectile dysfunction tablet,ZYDUS/CADILA
+CADICEFT 250 INJ,,2,Antibiotic injection,ZYDUS/CADILA
+CADICEFT 500 INJ,,2,Antibiotic injection,ZYDUS/CADILA
+CADICEFT SB 1.5GM INJ,,2,Antibiotic injection,ZYDUS/CADILA
+AMLOMED AT TAB,,2,Antihypertensive tablet,ZYDUS/CADILA
+ETHAMSTAT-500 TAB,,2,Antitubercular tablet,ZYDUS/CADILA
+IRAZ SHAMPOO,,2,Antifungal shampoo,ZYDUS/CADILA
+TERBINAC 250 TAB,,2,Antifungal tablet,ZYDUS/CADILA
+ZYBEND SYP,,2,Anthelmintic syrup,ZYDUS/CADILA
+ZYBEND PLUS SYP,,2,Anthelmintic syrup,ZYDUS/CADILA
+ZYPOVID 250GM JAR,,2,Antiseptic powder,ZYDUS/CADILA
+ZYPOVID 100ML,,2,Antiseptic solution,ZYDUS/CADILA
+ZYPOVID 500ML,,2,Antiseptic solution,ZYDUS/CADILA
+DP GESIC TAB 20*10,,2,Pain relief tablet,ZYDUS/CADILA
+DP GESIC TAB 120*10 PLASTIC,,2,Pain relief tablet,ZYDUS/CADILA
+ZYSET DROP,,2,Eye drops,ZYDUS/CADILA
+DEMISONE TAB,,2,Steroid tablet,ZYDUS/CADILA
+DEXASONE 2ML,,2,Steroid injection,ZYDUS/CADILA
+DEXASONE 20ML,,2,Steroid injection,ZYDUS/CADILA
+GENKA 20ML,,2,Antibiotic injection,ZYDUS/CADILA
+FEXIM O DRY SYRUP,,2,Antibiotic dry syrup,ZYDUS/CADILA
+FEXIM OF TAB,,2,Antibiotic tablet,ZYDUS/CADILA
+ITRADUS 100,,2,Antifungal capsule,ZYDUS/CADILA
+ITRADUS 200,,2,Antifungal capsule,ZYDUS/CADILA
+ITRADILA 100,,2,Antifungal capsule,ZYDUS/CADILA
+ITRADILA 200,,2,Antifungal capsule,ZYDUS/CADILA
+ALERTRIZ TAB,,2,Antihistamine tablet,ZYDUS/CADILA
+SKINSHINE OINT 15GM,,2,Skin lightening ointment,ZYDUS/CADILA
+CIPRODAC-250 TAB,,2,Antibiotic tablet,ZYDUS/CADILA
+CIPRODAC-500 TAB,,2,Antibiotic tablet,ZYDUS/CADILA
+DEXAMETHASONE (LOOSE),,2,Steroid tablet,ZYDUS/CADILA
+ONVIN-4MD,,2,Antiemetic tablet,ZYDUS/CADILA
+ROSUBEST-10,,2,Cholesterol tablet,ZYDUS/CADILA
+ROSUBEST-20,,2,Cholesterol tablet,ZYDUS/CADILA
+ROSUBEST-40,,2,Cholesterol tablet,ZYDUS/CADILA
+ROSUBEST-F,,2,Cholesterol tablet,ZYDUS/CADILA
+CALCIGEN-D3 CAP,,2,Calcium + Vitamin D3 capsule,ZYDUS/CADILA
+CALCIGEN-D3 SHOTS,,2,Calcium + Vitamin D3 shots,ZYDUS/CADILA
+ORITAXIM-200 TAB,,2,Antibiotic tablet,ZYDUS/CADILA
+CASTOR-NF 15GM,,2,Topical cream,LEEFORD
+CASTOR-NF 25GM,,2,Topical cream,LEEFORD
+DERMIFORD-15GM,,2,Dermatological cream,LEEFORD
+DERMIFORD-25GM,,2,Dermatological cream,LEEFORD
+ULTRABRITE-15GM,,2,Skin cream,LEEFORD
+ULTRABRITE-25GM,,2,Skin cream,LEEFORD
+ELOSONE-HT 15GM,,2,Steroid cream,LEEFORD
+ELOSONE-HT 25GM,,2,Steroid cream,LEEFORD
+CLINSOL GEL 15GM,,2,Antiacne gel,LEEFORD
+CLINSOL SOAP,,2,Antiacne soap,LEEFORD
+DIECOLD TAB,,2,Cold tablet,LEEFORD
+DIECOLD PLUS TAB,,2,Cold tablet,LEEFORD
+PICOLEX SYP,,2,Laxative syrup,LEEFORD
+AMROX-LS 60ML,,2,Cough syrup,LEEFORD
+AMROX-LS 100ML,,2,Cough syrup,LEEFORD
+ITROMED-100,,2,Antifungal capsule,LEEFORD
+ITROMED-200,,2,Antifungal capsule,LEEFORD
+NO SCARS CREAM,,2,Scar removal cream,TORQUE
+MEDISALIC CREAM,,2,Skin cream,TORQUE
+KETOMAC SHAMPOO,,2,Antifungal shampoo,TORQUE
+GLYBIOTIC PLUS EAR DROP,,2,Antibiotic ear drops,TORQUE
+CIPROMAC 250 TAB,,2,Antibiotic tablet,TORQUE
+TOREX SYP 100ML,,2,Cough syrup,TORQUE
+FIXIMAC 200,,2,Antibiotic tablet,TORQUE
+HEMO PLUS 225ML,,2,Haemoglobin tonic,TORQUE
+BEC-CG OINTMENT 10GM,,2,Topical ointment,ZENLAB
+C-ZEN PLUS SYP,,2,Vitamin C syrup,ZENLAB
+C-ZEN PLUS DS SYP,,2,Vitamin C syrup,ZENLAB
+CLOBYTE GM LOTION,,2,Antifungal lotion,ZENLAB
+CLOBYTE-S LOTION,,2,Antifungal lotion,ZENLAB
+E-400 CAP,,2,Vitamin E capsule,ZENLAB
+FERZEN CAP,,2,Iron supplement capsule,ZENLAB
+MEP-4 TAB,,2,Tablet,ZENLAB
+MEP-8 TAB,,2,Tablet,ZENLAB
+MEP-16 TAB,,2,Tablet,ZENLAB
+NEO CLOBYTE GM 10GM WHITE,,2,Antifungal cream,ZENLAB
+CLOBYTE GM GOLD CREAM,,2,Antifungal cream,ZENLAB
+NEUROPLEX CAP,,2,Neurological capsule,ZENLAB
+ZENBEC-N CREAM,,2,Topical cream,ZENLAB
+ZENLACTIN 200ML ORANGE,,2,Lactulose syrup,ZENLAB
+ZENOVIT CAP,,2,Multivitamin capsule,ZENLAB
+DICLORAN 3ML,,2,Diclofenac injection,JB CHEMICALS
+RANTAC 2ML,,2,Antacid injection,JB CHEMICALS
+DICLORAN AQ 1ML,,2,Diclofenac injection,JB CHEMICALS
+DICLORAN A TAB,,2,Pain relief tablet,JB CHEMICALS
+SKINBRITE 15GM RED,,2,Skin lightening cream,GALPHA
+SKINBRITE 15GM WHITE,,2,Skin lightening cream,GALPHA
+DICLOGAL SP,,2,Pain relief tablet,GALPHA
+HEM GALPHA SYRUP,,2,Haematinic syrup,GALPHA
+CEFACLASS 200,,2,Antibiotic tablet,PRIME MANKIND
+MAHAMOX CV 625,,2,Antibiotic tablet,PRIME MANKIND
+CEFACLASS-CV TAB,,2,Antibiotic tablet,PRIME MANKIND
+AMIKIND 500INJ,,2,Antibiotic injection,PRIME MANKIND
+AZIKIND 250 INJ,,2,Antibiotic injection,PRIME MANKIND
+AZIKIND 500 INJ,,2,Antibiotic injection,PRIME MANKIND
+PARTH PAIN RELIEF,,2,Pain relief tablet,PARTH
+SALBUTAMOL TAB,,2,Bronchodilator tablet,PARTH
+LOP-X TAB,,2,Tablet,PARTH
+PARTH DICLO PLUS TAB,,2,Pain relief tablet,PARTH
+METROPAR TAB,,2,Antihypertensive tablet,PARTH
+DICLOFENAC GREEN TAB,,2,Pain relief tablet,PARTH
+CO-TRI S.S,,2,Antibiotic tablet,PARTH
+PEECOLD TAB,,2,Cold tablet,PARTH
+LABMOX-250 CAP,,2,Antibiotic capsule,LABORATE
+LABMOX-500 CAP,,2,Antibiotic capsule,LABORATE
+LABMOX 250DT,,2,Antibiotic dispersible tablet,LABORATE
+CEFLOX-DEE DROP,,2,Antibiotic eye drops,LABORATE
+CEFLOX PLAIN DROP,,2,Antibiotic eye drops,LABORATE
+FESTIVE-DEE DROP,,2,Eye drops,LABORATE
+FESTIVE DROP,,2,Eye drops,LABORATE
+TOBRA DROP,,2,Antibiotic eye drops,LABORATE
+TOBRA-D DROP,,2,Antibiotic eye drops,LABORATE
+MOXI DROP,,2,Antibiotic eye drops,LABORATE
+MOXI-D DROP,,2,Antibiotic eye drops,LABORATE
+DECO DROP,,2,Eye drops,LABORATE
+DEXALAB 30ML,,2,Steroid eye drops,LABORATE
+GENTALAB 30ML,,2,Antibiotic eye drops,LABORATE
+KOLD TIME TAB,,2,Cold tablet,LABORATE
+LABOCOF TAB,,2,Cough tablet,LABORATE
+NFLOX-B 400 TAB,,2,Antibiotic tablet,LABORATE
+NDS NFLOX-TZ TAB,,2,Antibiotic tablet,LABORATE
+CEFLOX 500 (BLISTER),,2,Antibiotic tablet,LABORATE
+CEFLOX 500 (ALU-ALU),,2,Antibiotic tablet,LABORATE
+CIP-TZ TAB,,2,Antibiotic tablet,LABORATE
+DOO-CLAV DS WITH WATER,,2,Antibiotic syrup,LABORATE
+FESTIVE 200 YELLOW,,2,Eye drops,LABORATE
+FESTIVE 200 ROUND WHITE,,2,Eye drops,LABORATE
+FLUCOLAB 150 TAB,,2,Antifungal tablet,LABORATE
+LABDIC RELIEF TAB,,2,Pain relief tablet,LABORATE
+LABODERM OC CREAM,,2,Antifungal cream,LABORATE
+CEFLOX CF CREAM,,2,Antibiotic cream,LABORATE
+QUARD CREAM,,2,Topical cream,LABORATE
+LANTAC-150,,2,Antacid tablet,LABORATE
+LANTAC-D TAB,,2,Antacid tablet,LABORATE
+RANI-150 TAB,,2,Antacid tablet,LABORATE
+MAFLAB-DS SYP,,2,Syrup,LABORATE
+PICOLUS SYP LABORATE,,2,Laxative syrup,LABORATE
+PREDILAB-10 MG TAB,,2,Steroid tablet,LABORATE
+PROTILAB CHOCOLATE POWDER,,2,Protein supplement,LABORATE
+KT-5 DERM OINT,,2,Dermatological ointment,LABORATE
+CIFTOX-LB TAB,,2,Antibiotic tablet,LABORATE
+GENTACORT-D DROP,,2,Antibiotic + steroid eye drops,LABORATE
+BETAMOX-LB CAP,,2,Antibiotic capsule,LABORATE
+LABOCLOX-LB CAP,,2,Antibiotic capsule,LABORATE
+SILVEZ-PLUS OINT,,2,Antiseptic ointment,LABORATE
+AZIRIN-250 TAB,,2,Antibiotic tablet,LABORATE
+AZIRIN-500 TAB,,2,Antibiotic tablet,LABORATE
+AZILAB-250 TAB,,2,Antibiotic tablet,LABORATE
+AZILAB-500 TAB,,2,Antibiotic tablet,LABORATE
+ITRODERM-OC OINTMENT,,2,Antifungal ointment,LABORATE
+AZILAB-200 SYP,,2,Antibiotic syrup,LABORATE
+TOX-200 TAB,,2,Antibiotic tablet,LABORATE
+TROXONE 1GM INJECTION,,2,Antibiotic injection,LABORATE
+CLONAC PLUS SYRUP,,2,Pain relief syrup,LABORATE
+CIPDEC 500,,2,Antibiotic tablet,LABORATE
+VALERATE-N OINTMENT,,2,Steroid ointment,LABORATE
+LABMOX-125 DT,,2,Antibiotic dispersible tablet,LABORATE
+ACLOREADY PLUS TAB BLISTER,,2,Pain relief tablet,READYCURE
+ACLOREADY PLUS TAB (ALU-ALU),,2,Pain relief tablet,READYCURE
+ACLOREADY-SP TAB,,2,Pain relief tablet,READYCURE
+ACLOREADY-P TAB (15TAB),,2,Pain relief tablet,READYCURE
+AMROXTYCURE SYP (WITH WATER),,2,Cough syrup,READYCURE
+AMROXTYCURE-CV SYP (WITHOUT WATER),,2,Antibiotic syrup,READYCURE
+ANTACURE GEL (MINT),,2,Antacid gel,READYCURE
+AZECURE-250 TAB,,2,Antibiotic tablet,READYCURE
+AZECURE-500 TAB,,2,Antibiotic tablet,READYCURE
+CALCIURE-D3 TAB,,2,Calcium + Vitamin D3 tablet,READYCURE
+CEFDICURE-50 SYP (WITH WATER),,2,Antibiotic syrup,READYCURE
+CEFDICURE-100 SYP (WITH WATER),,2,Antibiotic syrup,READYCURE
+CETICURE-PLUS NF SYP,,2,Antihistamine syrup,READYCURE
+CETICURE-PLUS DS NF SYP,,2,Antihistamine syrup,READYCURE
+CETICURE-PLUS 3DX SYP,,2,Antihistamine syrup,READYCURE
+CETICURE-PLUS TAB,,2,Antihistamine tablet,READYCURE
+CETICURE-COLD N FLU TAB,,2,Cold & flu tablet,READYCURE
+CURETHRIN SOAP,,2,Antiscabies soap,READYCURE
+DEFLOCURE-6 TAB,,2,Steroid tablet,READYCURE
+DEXAREADY 30ML,,2,Steroid eye drops,READYCURE
+DICLOREADY AQUA 1ML,,2,Pain relief injection,READYCURE
+DICLOREADY-SP TAB,,2,Pain relief tablet,READYCURE
+DICLOREADY-MR TAB,,2,Pain relief tablet,READYCURE
+DROTOCURE-MF TAB,,2,Antispasmodic tablet,READYCURE
+FENAREADY-PLUS TAB,,2,Pain relief tablet,READYCURE
+FERY READY 200ML,,2,Iron supplement syrup,READYCURE
+FOLCURE-5 TAB,,2,Folic acid tablet,READYCURE
+GENTAREADY 30ML,,2,Antibiotic eye drops,READYCURE
+HUNGER READY RED 200ML,,2,Appetite syrup,READYCURE
+HUNGER READY YELLOW 200ML,,2,Appetite syrup,READYCURE
+IBROCURE SYP,,2,Pain relief syrup,READYCURE
+KETOZURE-ZPT SOAP,,2,Antifungal soap,READYCURE
+LIFOREADY-5 (BLISTER),,2,Tablet,READYCURE
+LIFOREADY-5 (ALU-ALU),,2,Tablet,READYCURE
+CETICURE 10 TAB (SMALL),,2,Antihistamine tablet,READYCURE
+CETICURE 10 TAB (BIG)(1400 TAB),,2,Antihistamine tablet,READYCURE
+LIVREADY-DS 200ML,,2,Liver tonic syrup,READYCURE
+LIVREADY-ZYME 200ML,,2,Digestive enzyme syrup,READYCURE
+MASCREADY-P TAB,,2,Pain relief tablet,READYCURE
+SPASREADY TAB,,2,Antispasmodic tablet,READYCURE
+MONTELCURE-L TAB,,2,Antiallergic tablet,READYCURE
+MONTELCURE-L SYRUP 60ML,,2,Antiallergic syrup,READYCURE
+MP CURE-4,,2,Tablet,READYCURE
+MP-CURE 8,,2,Tablet,READYCURE
+N-CURE 100 BLUE,,2,Tablet,READYCURE
+N-CURE 100 BLACK,,2,Tablet,READYCURE
+N-CURE 100 GREEN,,2,Tablet,READYCURE
+NOFLOCURE-400 TAB,,2,Antibiotic tablet,READYCURE
+OFOXCURE-200 TAB (BLISTER),,2,Antibiotic tablet,READYCURE
+OFOXCURE-200 TAB (ALU-ALU),,2,Antibiotic tablet,READYCURE
+OFOXCURE-OZ TAB,,2,Antibiotic tablet,READYCURE
+OFOXCURE-MZ SYP 30ML,,2,Antibiotic syrup,READYCURE
+OMECURE-20,,2,Acid reflux capsule,READYCURE
+OMEREADY-20,,2,Acid reflux capsule,READYCURE
+OMECURE-D,,2,Acid reflux capsule,READYCURE
+ONDEREADY-MD,,2,Antiemetic tablet,READYCURE
+PANTAREADY-DSR,,2,Acid reflux capsule,READYCURE
+PARACEE 500,,2,Paracetamol tablet,READYCURE
+P-NICURE 10,,2,Tablet,READYCURE
+PRENICURE-5 TAB,,2,Steroid tablet,READYCURE
+RABREADY-DSR TAB,,2,Acid reflux tablet,READYCURE
+RANTICURE-150,,2,Antacid tablet,READYCURE
+RANTICURE-D TAB,,2,Antacid tablet,READYCURE
+READYCOF BR 60ML,,2,Cough syrup,READYCURE
+READYCOF BR 100ML,,2,Cough syrup,READYCURE
+READYCOF DX 60ML,,2,Cough syrup,READYCURE
+READYCOF DX 100ML,,2,Cough syrup,READYCURE
+READYCOF LS 100ML,,2,Cough syrup,READYCURE
+READYCOF LS 60ML,,2,Cough syrup,READYCURE
+READYCOUGH DMR 60ML GREEN,,2,Cough syrup,READYCURE
+READYCOUGH DMR 100ML GREEN,,2,Cough syrup,READYCURE
+READYCOF AT 60ML,,2,Cough syrup,READYCURE
+READYOF AT 100ML,,2,Cough syrup,READYCURE
+READYCURE MULTIVITAMIN SYRUP 200ML,,2,Multivitamin syrup,READYCURE
+READYCURE MULTIVITAMIN CAPS,,2,Multivitamin capsule,READYCURE
+READYCURE READY VITAL CAPS (BLISTER),,2,Multivitamin capsule,READYCURE
+READY-VITAL CAP (ALU-ALU),,2,Multivitamin capsule,READYCURE
+READYDINE-O OINT 15GM,,2,Antiseptic ointment,READYCURE
+READYDERM-K5 OINT,,2,Dermatological ointment,READYCURE
+READYDOX 100 TAB,,2,Antibiotic tablet,READYCURE
+DOXREADY-LB CAP,,2,Antibiotic capsule,READYCURE
+READY RELIEF TAB (AMBER),,2,Pain relief tablet,READYCURE
+READY RELIEF TAB (RED),,2,Pain relief tablet,READYCURE
+READY RELIEF GEL 30GM,,2,Pain relief gel,READYCURE
+READYSULIDE-P (GOLDEN),,2,Pain relief tablet,READYCURE
+READYSULIDE-P (DOUBLE COLOR),,2,Pain relief tablet,READYCURE
+READYSULIDE-P (AMBER),,2,Pain relief tablet,READYCURE
+ZYME READY 200ML,,2,Digestive enzyme syrup,READYCURE
+SLOOMECURE PLUS TAB (20*15),,2,Tablet,READYCURE
+ZINOCURE 200ML SYRUP,,2,Zinc syrup,READYCURE
+READYXIME-LB SYP,,2,Antibiotic syrup,READYCURE
+READYXIME SYP WITH WATER,,2,Antibiotic syrup,READYCURE
+READYCLOX-LB CAP,,2,Antibiotic capsule,READYCURE
+READYXIME-LB 200 TAB,,2,Antibiotic tablet,READYCURE
+READYXIME 100 DT,,2,Antibiotic dispersible tablet,READYCURE
+AMIREADY 500 INJ,,2,Antibiotic injection,READYCURE
+READYLICO SYP 225ML,,2,Syrup,READYCURE
+MEFREADY DS 60ML,,2,Pain relief syrup,READYCURE
+READYCURE GLUCOSE C (ORANGE),,2,Glucose powder,READYCURE
+READYCURE GLUCOSE D (GREEN),,2,Glucose powder,READYCURE
+READYPOD 200 DT,,2,Antibiotic dispersible tablet,READYCURE
+READYMENTIN-CV 625 LB,,2,Antibiotic tablet,READYCURE
+READYPROT DHA (CHOCOLATE),,2,Protein supplement,READYCURE
+READYPROT DHA (KESAR PISTA),,2,Protein supplement,READYCURE
+READYTRA 200 CAP,,2,Capsule,READYCURE
+MUSCARE-P,,2,Pain relief tablet,RANGE ITEMS
+FENAK PLUS TAB,,2,Pain relief tablet,RANGE ITEMS
+STANCORT,,2,Steroid tablet,RANGE ITEMS
+DERMA-KT,,2,Antifungal cream,RANGE ITEMS
+DERMA-RX,,2,Dermatological cream,RANGE ITEMS
+DA-ZEAGRA TAB,,2,Erectile dysfunction tablet,RANGE ITEMS
+DERMI-5 CREAM,,2,Steroid cream,RANGE ITEMS
+MELAMET CREAM,,2,Skin lightening cream,RANGE ITEMS
+ZEFF TAB,,2,Antibiotic tablet,RANGE ITEMS
+VETAPION 2ML,,2,Injection,RANGE ITEMS
+ZANBETA INJ,,2,Injection,RANGE ITEMS
+MVI INJECTION,,2,Multivitamin injection,RANGE ITEMS
+IROSON INJ,,2,Iron supplement injection,RANGE ITEMS
+MONOTAX 1GM,,2,Antibiotic injection,RANGE ITEMS
+RANBAXY CHYWANPRASH,,2,Ayurvedic supplement,RANGE ITEMS
+NEUROVIT-12 INJ,,2,Vitamin B12 injection,RANGE ITEMS
+AGINAL-5,,2,Tablet,RANGE ITEMS
+AGINAL-AT,,2,Tablet,RANGE ITEMS
+CIPRO CF 15GM,,2,Antibiotic cream,RANGE ITEMS
+INDO TIGER DERM CREAM,,2,Dermatological cream,RANGE ITEMS
+DURADERM NF CREAM,,2,Dermatological cream,RANGE ITEMS
+INDKUS PAIN RELIEF TAB,,2,Pain relief tablet,RANGE ITEMS
+ARICEF 200 MICRO,,2,Antibiotic tablet,RANGE ITEMS
+ARICEF O PLUS MICRO,,2,Antibiotic tablet,RANGE ITEMS
+CALCIQUICK-D3 60K CAP,,2,Vitamin D3 capsule,DR. MORPEN
+CALCIQUICK-D3 SHOTS,,2,Vitamin D3 shots,DR. MORPEN
+CALCIQUICK-K2-7 STRONG,,2,Vitamin K2 + D3 tablet,DR. MORPEN
+CREMOPEN PLUS SYRUP,,2,Syrup,DR. MORPEN
+ESOPEN-DSR CAP,,2,Acid reflux capsule,DR. MORPEN
+ESOPEN-LS CAP,,2,Acid reflux capsule,DR. MORPEN
+DIAMORE-MSM TAB,,2,Antidiabetic tablet,DR. MORPEN
+DIAMORE-GM TAB,,2,Antidiabetic tablet,DR. MORPEN
+FERODOC-XT TAB,,2,Iron supplement tablet,DR. MORPEN
+LINOMORE-600 TAB,,2,Antibiotic tablet,DR. MORPEN
+MONTYMO-FX TAB,,2,Antiallergic tablet,DR. MORPEN
+MONTYMO-FX AB TAB,,2,Antiallergic tablet,DR. MORPEN
+BIFI BIOTIC SACHET,,2,Probiotic sachet,DR. MORPEN
+MORE BIOTIC CAPS,,2,Probiotic capsule,DR. MORPEN
+MORE-ZYME TAB,,2,Digestive enzyme tablet,DR. MORPEN
+PANTIMO-DSR CAPS,,2,Acid reflux capsule,DR. MORPEN
+PANTOMORE-DSR CAPS,,2,Acid reflux capsule,DR. MORPEN
+PENTATE-LS CAPS,,2,Acid reflux capsule,DR. MORPEN
+R.B KOOL DSR CAP,,2,Acid reflux capsule,DR. MORPEN
+R.B KOOL LS CAP,,2,Acid reflux capsule,DR. MORPEN
+THIODOC ACE-4 TAB,,2,Tablet,DR. MORPEN
+THIODOC-ACE PLUS TAB,,2,Tablet,DR. MORPEN
+THIODOC-ET TAB,,2,Tablet,DR. MORPEN
+MONTYCO-LC TAB,,2,Antiallergic tablet,DR. MORPEN
+VERTIDOC-8 TAB,,2,Vertigo tablet,DR. MORPEN
+VERTIDOC-16 TAB,,2,Vertigo tablet,DR. MORPEN
+DEFLAFINE-6 TAB,,2,Steroid tablet,DR. MORPEN
+STEAMORE-MD,,2,Tablet,DR. MORPEN
+TERBINADOC-250,,2,Antifungal tablet,DR. MORPEN
+RABIDOC-DSR CAP,,2,Acid reflux capsule,DR. MORPEN
+CALCIQUICK-K2 TAB,,2,Vitamin K2 tablet,DR. MORPEN
+SEROPEN-D TAB,,2,Tablet,DR. MORPEN
+SEROPEN-DP TAB,,2,Tablet,DR. MORPEN
+BULLFORD CITRASOL,,2,Supplement,BULLFORD
+Y-GRA 100 TAB,,2,Erectile dysfunction tablet,BULLFORD
+ENOCIN-B 250 TAB,,2,Antibiotic tablet,BULLFORD
+ENOCIN-B 500 TAB,,2,Antibiotic tablet,BULLFORD
+RELAXAZONE TAB,,2,Muscle relaxant tablet,BULLFORD
+FENA MR TAB,,2,Pain relief tablet,BULLFORD
+METABUL TAB,,2,Antidiabetic tablet,BULLFORD
+GRISO-CZ TAB,,2,Antifungal tablet,BULLFORD
+KUFFTUS-Q TAB,,2,Cough tablet,BULLFORD
+MIFI SPAS TAB,,2,Antispasmodic tablet,BULLFORD
+IGPYRIN TAB,,2,Pain relief tablet,BULLFORD
+ZEN-10 TAB,,2,Tablet,BULLFORD
+DICLOFON-MR TAB,,2,Pain relief tablet,PIL
+TROMANIL PLUS TAB,,2,Analgesic tablet,PIL
+TROMANIL SUPER TAB,,2,Analgesic tablet,PIL
+TROMANIL FORTE TAB,,2,Analgesic tablet,PIL
+TROMANIL-MR TAB,,2,Analgesic tablet,PIL
+VOLFLAM PLUS TAB,,2,Pain relief tablet,PIL
+ORTHODEX GEL 15GM,,2,Pain relief gel,PIL
+ORTHODEX GEL 30GM,,2,Pain relief gel,PIL
+ORTHODEX GEL 50GM,,2,Pain relief gel,PIL
+ORTHODEX SPRAY,,2,Pain relief spray,PIL
+CEDOPIL 50 SYP,,2,Antibiotic syrup,PIL
+CEDOPIL-CV SYP,,2,Antibiotic syrup,PIL
+MOXIPIL CV KID TAB,,2,Antibiotic tablet (paediatric),PIL
+MOXIPIL CV DROP,,2,Antibiotic drops,PIL
+MOXIPIL-CL 200 SYP,,2,Antibiotic syrup,PIL
+MOXIPIL-CV 400MG SYP,,2,Antibiotic syrup,PIL
+GM-SR 1,,2,Antidiabetic tablet,PIL
+GM-SR 2,,2,Antidiabetic tablet,PIL
+PIL GPM SR-1,,2,Antidiabetic tablet,PIL
+PIL GPM SR-2,,2,Antidiabetic tablet,PIL
+SENSOPIL GEL,,2,Topical gel,PIL
+PILTOP DSR,,2,Acid reflux capsule,PIL
+DELSONE-5 TAB,,2,Steroid tablet,PIL
+DELSONE-10 TAB,,2,Steroid tablet,PIL
+DELSONE-20 TAB,,2,Steroid tablet,PIL
+SNEECURE-EXTRA TAB,,2,Cold & allergy tablet,PIL
+PILZINE-10 TAB,,2,Antihistamine tablet,PIL
+AMBROPIL BR 100ML,,2,Cough syrup,PIL
+CHERIDRYL JUNIOR 50ML,,2,Antihistamine syrup,PIL
+SOTHREX JUNIOR 50ML,,2,Cough syrup,PIL
+SOTHREX BR 100ML,,2,Cough syrup,PIL
+SOTHREX PLUS 100ML,,2,Cough syrup,PIL
+SOTHREX TUSLI 100ML,,2,Cough syrup,PIL
+NASOPIL ADULT DROP,,2,Nasal drops,PIL
+NASOPIL PAEDIATRIC DROP,,2,Nasal drops (paediatric),PIL
+ONDAPIL-MD TAB,,2,Antiemetic tablet,PIL
+CREMAPIL-PLUS SYP,,2,Syrup,PIL
+T-SOAP SOAP,,2,Medicated soap,PIL
+SCABEPIL LOTION 100ML,,2,Antiscabies lotion,PIL
+DEADDICT-250 TAB,,2,Tablet,PIL
+DEADDICT-500 TAB,,2,Tablet,PIL
+ACCECLOWOC P TAB,,2,Pain relief tablet,WOCKHARDT
+ACCECLOWOC SP TAB,,2,Pain relief tablet,WOCKHARDT
+ESOPRAZOLE DSR CAP,,2,Acid reflux capsule,WOCKHARDT
+FERRIWOK XT TAB,,2,Iron supplement tablet,WOCKHARDT
+MAGENTA 20ML,,2,Injection,WOCKHARDT
+MERIDECA 20ML,,2,Injection,WOCKHARDT
+MERISULIDE PLUS TAB,,2,Pain relief tablet,WOCKHARDT
+MONTEWOK LC TAB,,2,Antiallergic tablet,WOCKHARDT
+PENTOWOK DSR CAP,,2,Acid reflux capsule,WOCKHARDT
+RABIWOK DSR CAP,,2,Acid reflux capsule,WOCKHARDT
+VIGOXXX 100,,2,Erectile dysfunction tablet,WOCKHARDT
+WOLYTE-EL POWDER,,2,Electrolyte powder,WOCKHARDT
